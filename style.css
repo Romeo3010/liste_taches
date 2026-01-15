@@ -12,6 +12,14 @@
             --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
             --overlay: rgba(0, 0, 0, 0.5);
         }
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 
         .dark-mode {
             --surface: #1e293b;
@@ -455,6 +463,13 @@
         .stat-item:nth-child(3) .stat-number {
             color: var(--warning);
         }
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
         /* --- RESPONSIVE ADJUSTMENTS --- */
         @media (max-width: 480px) {
@@ -490,3 +505,9 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             z-index: 100;
         }
+        .footer-date {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #888;
+}

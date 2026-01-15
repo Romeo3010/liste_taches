@@ -6,14 +6,13 @@
     <title>To-do</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
+
     <div class="theme-switch" onclick="toggleTheme()">
         <i class="fas fa-moon"></i>
     </div>
 
-    <!-- Modal de suppression -->
     <div class="modal-overlay" id="deleteModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -22,7 +21,7 @@
                 </div>
                 <h3 class="modal-title">Confirmer la suppression</h3>
             </div>
-            <p class="modal-text" id="deleteModalMessage">Êtes-vous sûr de vouloir supprimer cette tâche ? Cette action est irréversible.</p>
+            <p class="modal-text" id="deleteModalMessage"></p>
             <div class="modal-actions">
                 <button class="modal-btn modal-btn-cancel" onclick="closeModal('delete')">Annuler</button>
                 <button class="modal-btn modal-btn-delete" onclick="confirmDelete()">Supprimer</button>
@@ -30,7 +29,6 @@
         </div>
     </div>
 
-    <!-- Modal d'édition -->
     <div class="modal-overlay" id="editModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -43,7 +41,7 @@
                 <input type="text" id="editTaskTitle" class="modal-input" placeholder="Titre de la tâche">
                 <select id="editPrioritySelect" class="modal-select">
                     <option value="low">Basse Priorité</option>
-                    <option value="medium">Moyenne</option>
+                    <option value="medium">Moyenne Priorité</option>
                     <option value="high">Haute Priorité</option>
                 </select>
             </div>
@@ -55,11 +53,13 @@
     </div>
 
     <div class="app-card">
+
         <header class="header">
             <div class="header-info">
                 <h1>Mes Tâches</h1>
                 <p id="dateDisplay" style="color: var(--text-muted); font-size: 0.85rem;"></p>
             </div>
+
             <div class="progress-container">
                 <svg width="80" height="80" class="progress-circle">
                     <circle cx="40" cy="40" r="35" fill="transparent" stroke="rgba(0,0,0,0.1)" stroke-width="4"/>
@@ -72,7 +72,6 @@
             </div>
         </header>
 
-        <!-- Section des statistiques détaillées -->
         <div class="stats-container">
             <div class="stat-item">
                 <span id="totalTasks" class="stat-number">0</span>
@@ -95,16 +94,16 @@
             <div class="controls">
                 <select id="prioritySelect">
                     <option value="low">Basse Priorité</option>
-                    <option value="medium">Moyenne</option>
+                    <option value="medium">Moyenne Priorité</option>
                     <option value="high">Haute Priorité</option>
                 </select>
                 <button class="btn-add" onclick="addTask()">Ajouter</button>
             </div>
         </div>
 
-        <div class="task-list" id="taskList">
-            <!-- Les tâches seront insérées ici dynamiquement -->
-        </div>
+        <div class="task-list" id="taskList"></div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
